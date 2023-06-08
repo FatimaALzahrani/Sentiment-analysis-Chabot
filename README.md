@@ -3,14 +3,14 @@
 
 ***A simple chatbot to analyze sentiment using the nltk library in Python, for conversations in Arabic***
  
-<img width="298" alt="تحليل_مشاعر-removebg-preview" src="https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/8ebbd669-948b-40b8-aadb-9919a380c458">
+<img width="650" alt="تحليل_مشاعر-removebg-preview" src="https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/8ebbd669-948b-40b8-aadb-9919a380c458">
 
 
 ## Table of contents
 * [Introduction](#Introduction)
-  * What Chatbot?![image](https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/854999e7-da02-4a15-b837-b07d32f50f13)
-  * Why we need Chatbots?![image](https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/29d36f9c-8c58-4939-8bd6-f18500946b83)
-  * Types of Chatbots![image](https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/12a10814-2905-4bc7-aba8-2f8929c74eab)
+  * What Chatbot?
+  * Why we need Chatbots?
+  * Types of Chatbots!
 * [Background_information](#Background_information)
 * [Related_Work](#Related_Work)
 * [Problem](#Problem)
@@ -27,14 +27,14 @@ Chatbots can be used in various applications, such as customer support, virtual 
 They can be implemented through different technologies, including rule based systems, retrieval-based models, and generative models.
 
 ##  * Why we need Chatbots?
-### - Cost and Time Efficiency: Unlike humans, chatbots can operate 24/7, providing round-the-clock support and instant responses. They can handle multiple conversations simultaneously, ensuring efficient and timely interactions.
-### - Affordable Development: With technological advancements, various development tools haveemerged, making it easier and more cost-effective to create and integrate chatbots. Businesses can invest a relatively small amount and achieve significant benefits.
-### - Human-like Interactions: Modern chatbots are equipped with text-to-speech technology, enabling them to communicate in a more human-like manner. This enhances user experience, as it feels like interacting with a real person on the other side.
-### - Business Branding: Chatbots play a crucial role in modern business strategies, including advertising, branding, and customer engagement. They can promote products and services, provide daily updates, and create a personalized and engaging experience for users.
+**- Cost and Time Efficiency:** Unlike humans, chatbots can operate 24/7, providing round-the-clock support and instant responses. They can handle multiple conversations simultaneously, ensuring efficient and timely interactions.
+**- Affordable Development:** With technological advancements, various development tools haveemerged, making it easier and more cost-effective to create and integrate chatbots. Businesses can invest a relatively small amount and achieve significant benefits.
+**- Human-like Interactions:** Modern chatbots are equipped with text-to-speech technology, enabling them to communicate in a more human-like manner. This enhances user experience, as it feels like interacting with a real person on the other side.
+**- Business Branding:** Chatbots play a crucial role in modern business strategies, including advertising, branding, and customer engagement. They can promote products and services, provide daily updates, and create a personalized and engaging experience for users.
 
 ##  * Type of Chatbots
-### - Rule-based chatbots : operate based on predefined rules and patterns. These chatbots are trained using machine learning models on user intents and corresponding responses. When a user interacts with the chatbot, it analyzes their input and matches it with predefined rules to determine the intent and provide an appropriate response.
-### = Self-learning chatbots : are designed to continuously improve their performance and understanding of user intents without explicit programming. These chatbots utilize advanced technologies such as machine learning, deep learning, and natural language processing (NLP) to learn from user interactions and adapt their responses over time. Self-learning chatbots can autonomously identify user intents and provide more accurate and personalized responses
+**- Rule-based chatbots :** operate based on predefined rules and patterns. These chatbots are trained using machine learning models on user intents and corresponding responses. When a user interacts with the chatbot, it analyzes their input and matches it with predefined rules to determine the intent and provide an appropriate response.
+**- Self-learning chatbots :** are designed to continuously improve their performance and understanding of user intents without explicit programming. These chatbots utilize advanced technologies such as machine learning, deep learning, and natural language processing (NLP) to learn from user interactions and adapt their responses over time. Self-learning chatbots can autonomously identify user intents and provide more accurate and personalized responses
 
  <hr>
  
@@ -72,7 +72,7 @@ By leveraging sentiment analysis, chatbots can offer tailored responses to users
 # Solution
 To solve the previous problem, we implemented a Chatbot using the Python NLTK library to do sentiment analysis.
 ## 1- import the library and classes we need to use
-    #
+    
       import nltk
       from nltk.chat.util import Chat, reflections
       
@@ -81,7 +81,7 @@ reflections – Another import we have done is reflections which is a dictionary
 
 ## 2- building logic for the NLTK chatbot.
 ### A. reflections Solution
-    #
+    
       emotions = {
       ,['سعيد': ]'جميل','حلو','نجاح','تخرج','مبسوط','فرحان','سعيد', 'مبتهج', 'مرتاح'
       ,['حزين': ]'كذب','مهموم','نادم','تحطم','موت','مات','حزين', 'مكسور القلب', 'مكروب'
@@ -92,7 +92,7 @@ reflections – Another import we have done is reflections which is a dictionary
       }
       
 ### B. Generating conversation patterns and responses based on a dictionary of emotions.
-      #
+      
       conversations = []
       for emotion, words in emotions.items():
       patterns = [r'\b{}\b'.format(word) for word in words]
@@ -102,72 +102,73 @@ reflections – Another import we have done is reflections which is a dictionary
 
 ### C- Rules
 we have to create rules. The lines of code given below create a simple set of rules. the first line describes the user input which we have taken as raw string input and the next line is our chatbot response.
-       #
-        conversations.extend([ (
-        ,"سالم|السالم|مرحًبا|مرحبا|أهال"r
-        ["مرحًبا، كيف يمكنني مساعدتك؟", "أهًال، ما الذي تحتاجه؟"]
-        ), (
-        ,"إىل اللقاء|مع السالمه|مع السالمة"r
-        [".أتمنى لك يوًما سعيًدا!", "إىل اللقاء. تفضل بطلبك إذا احتجت مساعدة أخرى"]
-        ), (
-        , "(*.) اسمي"r
-        ["مرحًبا ،1% كيف حالك اليوم؟"]
-        ), (
-        ,"ما اسمك؟"r
-        ["!أنا روبوت تحليل المشاعر تم إنشاؤه بواسطة فاطمة الزهراني.و غدي "]
-        ), (
-        ,"كيف حالك؟"r
-        ["أنا بخير، ماذا عنك؟"]
-        ), (
-        ,"(*.) آسف"r
-        ["ال بأس"]
-        ), (
-        ,"أنا بخير"r
-        ["من الرائع سماع ذلك، كيف يمكنني مساعدتك؟"]
-        ), (
-        ,"أنا ).*( أفعل الخير"r
-        ["(: سررت بسماع ذلك" , "كيف يمكنني مساعدتك؟"]
-        ), (
-        ,"كم عمرك؟"r
-        ["أنا برنامج كمبيوتر، بجدية هل تسألني هذا؟"]
-        ), (
-        ,"(*.) تم إنشاؤك؟"r
-        ["NLTK Python فاطمة وغدي أنشأوني باستخدام مكتبة"]
-        ), (
-        ,"الموقع | المدينة(؟) (*.)"r
-        ["الباحة"]
-        ), (
-        , "(*.) ما حالة الطقس في"r
-        الطقس في 1% رائع كالعادة" , "حار جًدا هنا في 1%" , "بارد جًدا هنا في 1%" ,"لم أسمع حتى"]
-        ["عن 1%
-        ), (
-        ,"(*.) أنا أعمل في"r
-        [".شركة رائعة، لقد سمعت عنها. لكنهم يواجهون خسارة كبيرة هذه األيام %1"]
-        ), (
-        ,"(*.) كيف ).*( الصحة"r
-        ["أنا برنامج كمبيوتر، لذا فأنا دائًما بصحة جيدة"]
-        ), (
-        , "أنا أبحث عن أدلة ودورات عبر اإلنترنت لتعلم علوم البيانات، هل يمكنك اقتراح ذلك؟"r
-        عىل العديد من المقاالت الرائعة مع شرح كل خطوة باإلضافة إىل Tech_Crazy يحتوي"]
-        ["التعليمات البرمجية، يمكنك استكشافها
-        ),
-        ,"إنهاء"r( 
-        ["(: اعتني بنفسك. أراك قريًبا"]
-        ), (
-        r".*",
-        ["عذًرا، لم أتمكن من فهم ذلك. يمكنك إعادة المحاولة؟"]
-        ),])
+       
+         conversations.extend([ (
+         ,"سالم|السالم|مرحًبا|مرحبا|أهال"r
+         ["مرحًبا، كيف يمكنني مساعدتك؟", "أهًال، ما الذي تحتاجه؟"]
+         ), (
+         ,"إىل اللقاء|مع السالمه|مع السالمة"r
+         [".أتمنى لك يوًما سعيًدا!", "إىل اللقاء. تفضل بطلبك إذا احتجت مساعدة أخرى"]
+         ), (
+         , "(*.) اسمي"r
+         ["مرحًبا ،1% كيف حالك اليوم؟"]
+         ), (
+         ,"ما اسمك؟"r
+         ["!أنا روبوت تحليل المشاعر تم إنشاؤه بواسطة فاطمة الزهراني.و غدي "]
+         ), (
+         ,"كيف حالك؟"r
+         ["أنا بخير، ماذا عنك؟"]
+         ), (
+         ,"(*.) آسف"r
+         ["ال بأس"]
+         ), (
+         ,"أنا بخير"r
+         ["من الرائع سماع ذلك، كيف يمكنني مساعدتك؟"]
+         ), (
+         ,"أنا ).*( أفعل الخير"r
+         ["(: سررت بسماع ذلك" , "كيف يمكنني مساعدتك؟"]
+         ), (
+         ,"كم عمرك؟"r
+         ["أنا برنامج كمبيوتر، بجدية هل تسألني هذا؟"]
+         ), (
+         ,"(*.) تم إنشاؤك؟"r
+         ["NLTK Python فاطمة وغدي أنشأوني باستخدام مكتبة"]
+         ), (
+         ,"الموقع | المدينة(؟) (*.)"r
+         ["الباحة"]
+         ), (
+         , "(*.) ما حالة الطقس في"r
+         الطقس في 1% رائع كالعادة" , "حار جًدا هنا في 1%" , "بارد جًدا هنا في 1%" ,"لم أسمع حتى"]
+         ["عن 1%
+         ), (
+         ,"(*.) أنا أعمل في"r
+         [".شركة رائعة، لقد سمعت عنها. لكنهم يواجهون خسارة كبيرة هذه األيام %1"]
+         ), (
+         ,"(*.) كيف ).*( الصحة"r
+         ["أنا برنامج كمبيوتر، لذا فأنا دائًما بصحة جيدة"]
+         ), (
+         , "أنا أبحث عن أدلة ودورات عبر اإلنترنت لتعلم علوم البيانات، هل يمكنك اقتراح ذلك؟"r
+         عىل العديد من المقاالت الرائعة مع شرح كل خطوة باإلضافة إىل Tech_Crazy يحتوي"]
+         ["التعليمات البرمجية، يمكنك استكشافها
+         ),
+         ,"إنهاء"r( 
+         ["(: اعتني بنفسك. أراك قريًبا"]
+         ), (
+         r".*",
+         ["عذًرا، لم أتمكن من فهم ذلك. يمكنك إعادة المحاولة؟"]
+         ),])
         
 ## 3- creates an instance of a chatbot using the Chat class
-       #
+       
        chatbot = Chat(conversations, reflections)
+       
 ***conversations*** is the list of conversation patterns and responses that define the behavior of the chatbot. These conversation pairs are generated in prev page based on different emotions or predefined patterns.
 ***reflections*** – Another import we have done is reflections which is a dictionary containing basic input and corresponding outputs. You can also create your own dictionary with more responses you want. if you print reflections it will be something like this.
 ***Chat*** class is a part of the chatbot implementation and provides methods for processing user input,matching patterns, and generating appropriate responses.
 
 ## 4- Create a analyze_emotion function
 function defines sentiment analysis or emotion analysis on a given sentence
-      #
+      
       def analyze_emotion(sentence):
         tokens = nltk.word_tokenize(sentence)
         emotion_scores = {emotion: 0 for emotion in emotions}
@@ -194,61 +195,29 @@ function defines sentiment analysis or emotion analysis on a given sentence
           :'المحاولة؟
           print("الرد:"{} .format(chatbot_response))
           if emotion=="خائف":
-          وِن ِإن ُكنُتم ُّمْؤِمِنيَن"=forYou
-          ُف
-          وُهْم َوَخا
-          ُف
-          اَل َتَخا
-          " َف
+              forYou="فَلَا تَخَافُوهُمْ وَخَافُونِ إِن كُنتُم مُّؤْمِنِينَ"
           elif emotion=="غاضب":
-          اَدٰى َوُهَو َم ْكُظوٌم"=forYou
-          ْذ َن
-          ُحوِت ِإ
-          ْل
-          ِّبَك َواَل َت ُكن َكَصاِحِب ا
-          اْصِبْر ِل ُح ْكِم َر
-          " َف
+              forYou="فَاصْبِرْ لِحُكْمِ رَبِّكَ وَلَا تَكُن كَصَاحِبِ الْحُوتِ إِذْ نَادَىٰ وَهُوَ مَكْظُومٌ"
           elif emotion=="حزين":
-          ْلَعِليُم"=forYou
-          ِه َجِميًعا ُهَو الَّسِميُع ا
-          َّل
-          ِل
-          ْلِعَّز َة
-          ْوُلُهْم ِإَّن ا
-          "َواَل َيْحُز ْنَك َق
+              forYou="وَلَا يَحْزُنْكَ قَوْلُهُمْ إِنَّ الْعِزَّةَ لِلَّهِ جَمِيعًا هُوَ السَّمِيعُ الْعَلِيمُ"
           elif emotion=="متحمس":
-          ْلُمْؤِمِنيَن"=forYou
-          ْجَر ا
-          َّن َهَّللا اَل ُيِضيُع َأ
-          "يْسَتْبِشُروَن ِبِنْعَمٍة ِمَن ِهَّللا َو َفْضٍل َوَأ
+              forYou="يسْتَبْشِرُونَ بِنِعْمَةٍ مِنَ اللَّهِ وَفَضْلٍ وَأَنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُؤْمِنِينَ"
           elif emotion=="مكتئب":
-          وُب "=forYou
-          ُقُل
-          ْل
-          َتْطَمِئّن ا
-          ِبِذْكِر ِهّللا
-          َال
-          َأ
-          وُبُهْم ِبِذْكِر ِهّللا
-          َو َتْطَمِئّن ُق ُل
-          ّلِذيَن آَمُنوْا
-          "ا
+              forYou=" الّذِينَ آمَنُواْ وَتَطْمَئِنّ قُلُوبُهُمْ بِذِكْرِ اللّهِ أَلاَ بِذِكْرِ اللّهِ تَطْمَئِنّ الْقُلُوبُ"
           else:
-          forYou=""
-          َيْفَر ُحوا ُهَو َخْيٌر ِمَّما َيْجَمُعوَن"=forYou #
-          ِبَذِلَك َف ْل
-          " ُقْل ِبَفْضِل ِهَّللا َو ِبَرْحَمِتِه َف
+              forYou=""
+              # forYou="قُلْ بِفَضْلِ اللَّهِ وَبِرَحْمَتِهِ فَبِذَلِكَ فَلْيَفْرَحُوا هُوَ خَيْرٌ مِمَّا يَجْمَعُونَ"
           print(forYou)
     
 ## 6- Call the previous function to start the conversation
-      #
+      
       run_chatbot()
       
 <hr>
 
 # Output
 
-<img width="243" alt="nlp" src="https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/524e5f5a-e9b4-4b24-a384-24289c1c3426">
+<img width="300" alt="nlp" src="https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/524e5f5a-e9b4-4b24-a384-24289c1c3426">
 
 <hr>
 
