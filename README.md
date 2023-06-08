@@ -1,9 +1,8 @@
-# Sentiment analysis Chabot
- ![header](https://capsule-render.vercel.app/api?type=waving&color=99D9EA&height=300&section=header&text=Sentiment%analysis%Chabot&descAlignY=51&descAlign=62)
+ ![header](https://capsule-render.vercel.app/api?type=waving&color=99D9EA&height=300&section=header&text=Sentiment%20analysis%20Chabot&descAlignY=51&descAlign=62)
 
 ***A simple chatbot to analyze sentiment using the nltk library in Python, for conversations in Arabic***
  
-<img width="650" alt="تحليل_مشاعر-removebg-preview" src="https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/8ebbd669-948b-40b8-aadb-9919a380c458">
+<img width="750" alt="تحليل_مشاعر-removebg-preview" src="https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/8ebbd669-948b-40b8-aadb-9919a380c458">
 
 
 ## Table of contents
@@ -178,8 +177,9 @@ function defines sentiment analysis or emotion analysis on a given sentence
               emotion_scores[emotion] += 1
             max_emotion = max(emotion_scores, key=emotion_scores.get)
         return max_emotion
+        
 ## 5- A function to run the chatbot, and print the feelings after analysis and the appropriate response from the conversation and appropriate words for his current feelings
-        #
+        
           def run_chatbot():
           السالم عليكم ورحمة هللا , أنا بوت لتحليل المشاعر. اكتب 'مع السالمة'")print
           ("للخروج
@@ -217,7 +217,7 @@ function defines sentiment analysis or emotion analysis on a given sentence
 
 # Output
 
-<img width="300" alt="nlp" src="https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/524e5f5a-e9b4-4b24-a384-24289c1c3426">
+<img width="500" alt="nlp" src="https://github.com/FatimaALzahrani/Sentiment-analysis-Chabot/assets/107775566/524e5f5a-e9b4-4b24-a384-24289c1c3426">
 
 <hr>
 
